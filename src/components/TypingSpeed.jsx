@@ -103,6 +103,7 @@ const TypingSpeed = () => {
           <input type='text' className='input-field' ref={inputRef} onChange={handleChange} />
           {currentParagraph.split('').map((char, index) => (
             <span
+              style={{ borderBottomColor: colorScheme.borderColor }}
               className={`character ${index === charIndex ? 'active' : ''} ${correctWrong[index]}`}
               ref={(e) => (charRef.current[index] = e)}
             >
